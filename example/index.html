@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../build/MiniPage.js"></script>
+    <script>
+        var mp;
+        MiniPage.ready(function(){
+            mp = new MiniPage(10,180,12,8);
+            console.log("当前页");
+            console.log(10);
+            console.log("上一页");
+            console.log(mp.getPrepPage());
+            console.log("可见页");
+            console.log(mp.getShowingPageToArray());
+            console.log("下一页");
+            console.log(mp.getNextPage());
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
