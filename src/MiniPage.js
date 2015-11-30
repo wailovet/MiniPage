@@ -15,16 +15,18 @@ define(['jquery'],function(){
             throw "page error";
         }
         if(cur_page < look_page_count/2){
-            for(var i =0;i<look_page_count && i < all_page;i++){
+            for(var i =0;i<look_page_count &&i+1 > 0&&i+1 <= all_page ;i++){
                 look_page_arr[i] = i+1;
             }
         }else {
             if(cur_page > all_page - look_page_count/2){
-                for(var i =0;i<look_page_count && i < all_page;i++){
-                    look_page_arr[i] = all_page - look_page_count + i +1;
+                for(var i =0;i<look_page_count;i++){
+                    if(all_page - look_page_count + i +1 > 0&&  all_page - look_page_count + i +1 <= all_page ){
+                        look_page_arr[i] = all_page - look_page_count + i +1;
+                    }
                 }
             }else{
-                for(var i =0;i<look_page_count && i < all_page;i++){
+                for(var i =0;i<look_page_count ;i++){
                     look_page_arr[i] = cur_page - 1 + i ;
                 }
             }
