@@ -6,15 +6,19 @@
     <script>
         var mp;
         MiniPage.ready(function(){
-            mp = new MiniPage(10,180,12,8);
+            mp = new MiniPage(14,180,12,10);
             console.log("当前页");
-            console.log(10);
+            console.log(13);
             console.log("上一页");
             console.log(mp.getPrepPage());
             console.log("可见页");
             console.log(mp.getShowingPageToArray());
             console.log("下一页");
             console.log(mp.getNextPage());
+            console.log("总页数");
+            console.log(mp.getPageCount());
+            console.log("当前项数");
+            console.log(mp.getItemCount());
         });
     </script>
     <title></title>
